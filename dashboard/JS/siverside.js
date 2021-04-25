@@ -8,8 +8,39 @@ $(document).ready(function() {
             "data": null,
             "defaultContent": "<div class='text-center'><div class='btn-group'><button class='btn btn-primary btnEditar' data-toggle='modal' data-target='#exampleModalCenter'><i class='fas fa-eye'></i></button>&nbsp&nbsp<button class='btn btn-info btnproforma'><i class='fas fa-file-invoice-dollar'></i></button>&nbsp&nbsp<button class='btn btn-danger btnEliminar'><i class='fas fa-trash-alt'></i></button></div>"
         }],
+        "order": [
+            [1, 'asc']
+        ],
+        "language": {
+            "lengthMenu": "Mostrar _MENU_ registros",
+            "zeroRecords": "No se encontraron resultados",
+            "info": "Mostrando registros del _START_ al _END_ de un total de _TOTAL_ registros",
+            "infoEmpty": "Mostrando registros del 0 al 0 de un total de 0 registros",
+            "infoFiltered": "(filtrado de un total de _MAX_ registros)",
+            "sSearch": "Buscar:",
+            "oPaginate": {
+                "sFirst": "Primero",
+                "sLast": "Último",
+                "sNext": "Siguiente",
+                "sPrevious": "Anterior"
+            },
+            "sProcessing": "Procesando...",
+        },
+        "lengthMenu": [ 10, 25, 50, 75, 100, 200, 500 ]
+    });
+
+    new $.fn.dataTable.Buttons( tablaproductos, {
+        buttons: [
+            'pdf', 'excel'
+        ]
     } );
+
+    tablaproductos.buttons( 0, null ).container().prependTo(
+        tablaproductos.table().container()
+    );
+
 } );
+
 
 $(document).on("click", ".btnEditar", function(){    
     

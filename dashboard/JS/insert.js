@@ -12,22 +12,26 @@ $("#formPersonas").submit(function(e){
     comentario = $.trim($("#comentario").val());
 
     $.ajax({
-            url: "../dashboard/bd/c.php",
+            url: "../dashboard/bd/crud.php",
             type: "POST",
             dataType: "json",
             data: {
-                id: id,
                 nombre:nombre, 
                 codigo1:codigo1,
                 codigo2:codigo2,
                 marca:marca,
                 modelopresentacion:modelopresentacion,
-                pventa:preventa,
+                pventa:precio,
                 anio:anio,
                 comentario:comentario,
-                opcion: 2,
+                opcion: 1,
             },
-            success: function(data){  
+            success: function(){  
+                Swal.fire(
+                    'Producto insertado',
+                    'Con exito',
+                    'success'
+                  )
             }        
         });    
 });

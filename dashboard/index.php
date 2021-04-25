@@ -1,21 +1,6 @@
 <?php
   include_once "Views/parte_superior.php"
 ?>
-
-
-<?php
-    include_once 'bd/conexion.php';
-    $objeto = new Conexion();
-    $conexion = $objeto->Conectar();
-
-    $consul = "SELECT * FROM producto WHERE esVisible = 1";
-
-    $consulta = $consul;
-    $resultado = $conexion->prepare($consulta);
-    $resultado->execute();
-    $data = $resultado->fetchAll(PDO::FETCH_ASSOC);
-?>
-
 <!-- EL MERO INDEX -->
 
   <!-- Content Wrapper. Contains page content -->
@@ -30,7 +15,7 @@
           <div class="col-sm-6">
             <ol class="breadcrumb float-sm-right">
               <li class="breadcrumb-item"><a href="#">Home</a></li>
-              <li class="breadcrumb-item active">Vista principal</li>
+              <li class="breadcrumb-item active">Vista de Productos</li>
             </ol>
           </div><!-- /.col -->
         </div><!-- /.row -->
@@ -47,7 +32,7 @@
             <table id="tablaproductos" class="ui celled table" style="width:100%">
               <thead class="text-center">
                 <tr>
-                  <th hidden>id</th>
+                  <th>id</th>
                   <th>Codigo 1</th>
                   <th>Codigo 2</th>
                   <th>Producto</th>
@@ -59,22 +44,6 @@
                   <th>Acciones</th>
                 </tr>
               </thead>
-              <tbody>
-                  <?php foreach ($data as $dat) { ?>
-                  <tr>
-                    <td hidden><?php echo $dat['id'] ?></td>
-                    <td><?php echo $dat['codigo1'] ?></td>
-                    <td><?php echo $dat['codigo2'] ?></td>
-                    <td><?php echo $dat['nombre'] ?></td>
-                    <td><?php echo $dat['marca'] ?></td>
-                    <td ><?php echo $dat['modelo'] ?></td>
-                    <td><?php echo number_format($dat['precio'], 2, '.', ''); ?></td>
-                    <td><?php echo $dat['anio'] ?></td>
-                    <td><?php echo $dat['descripcion'] ?></td>
-                    <td></td>
-                  </tr>
-                  <?php } ?>
-              </tbody>
             </table>
         </div>
 <?php
@@ -118,8 +87,12 @@
                         <input type="number" class="form-control" id="pventa" required>
                     </div>
                     <div class="form-group col-md-3">
+                        <label for="inputCity">Precio Anterior</label>
+                        <input type="number" class="form-control" id="pante" readonly>
+                    </div>
+                    <div class="form-group col-md-3">
                         <label for="inputState">Año</label>
-                        <input type="text" class="form-control" id="anio" required>
+                        <input type="text" class="form-control" id="anio">
                     </div>
                     <div class="form-group col-md-6">
                       <label for="inputPassword4">Comentario</label>
@@ -137,7 +110,7 @@
 </div>
 
 <script src="//cdn.jsdelivr.net/npm/sweetalert2@10"></script>
-<script src="JS/index.js"></script>
+<script src="JS/siverside.js"></script>
 
 <style>
 

@@ -4,8 +4,7 @@ $(document).ready(function() {
             "targets": -1,
             "data": null,
             "defaultContent": "<div class='text-center'><div class='btn-group'><button class='btn btn-primary btnEditar' data-toggle='modal' data-target='#exampleModalCenter'><i class='fas fa-eye'></i></button>&nbsp&nbsp<button class='btn btn-info btnproforma'><i class='fas fa-file-invoice-dollar'></i></button>&nbsp&nbsp<button class='btn btn-danger btnEliminar'><i class='fas fa-trash-alt'></i></button></div>"
-        }],
-      
+        }],      
         "order": [
             [1, 'asc']
         ],

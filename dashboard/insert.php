@@ -81,7 +81,7 @@
                     </div>
                 </div>
                                 
-                <button type="button" onclick="guadarDatosProductos()" class="btn btn-primary">Guardar</button>
+                <button type="submit" class="btn btn-primary">Guardar</button>
             </div>
         </div>
         <!-- /.card -->

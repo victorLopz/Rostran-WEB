@@ -12,12 +12,23 @@ switch($opcion){
         $codigo2 = $_POST["codigo2"];
         $nombre = $_POST["nombre"];
         $marca = $_POST["marca"];
-        $modelo = $_POST["modelo"];
+        $modelo = $_POST["modelopresentacion"];
         $anio = $_POST["anio"]; 
-        $precio = $_POST["precio"];
-        $descripcion = $_POST["descripcion"];
+        $precio = $_POST["pventa"];
+        $descripcion = $_POST["comentario"];
+
+        $consulta = "INSERT INTO producto(nombre, codigo1, codigo2, marca, modelo, precio, anio, descripcion) VALUES('$nombre', '$codigo1', '$codigo2', '$marca', '$modelo', '$precio', '$anio', '$descripcion') ";			
+        $resultado = $conexion->prepare($consulta);
+        $resultado->execute();
+
+        if($resultado){
+            echo "GUARDADO";
+        }else{
+            echo "ERROR";
+        }
 
         break;
+
     case 2: //modificación
         
         $id = $_POST["id"];
@@ -44,7 +55,7 @@ switch($opcion){
 
         if($precio != $precioAnterior){
         
-            $consulta = "INSERT INTO historialPrecio(precio, producto_id) VALUES('$precioAnterior', '$id')";       
+            $consulta = "INSERT INTO historialprecio(precio, producto_id) VALUES('$precioAnterior', '$id')";       
             $resultado = $conexion->prepare($consulta);
             $resultado->execute();
 
