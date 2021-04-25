@@ -2,12 +2,22 @@
 class TableData { 
  	private $_db;
 	public function __construct() {
-		try {			
-			$host		= 'localhost';
-			$database	= 'u122030778_autopartesrost';
-			$user		= 'root';
-			$passwd		= '';
+		try {	
 			
+			$valor = true;
+
+			if($valor){
+				$host		= 'localhost';
+				$database	= 'u122030778_autopartesrost';
+				$user		= 'root';
+				$passwd		= '';			
+			}else{
+				$host		= 'localhost';
+				$database	= 'u122030778_autopartesrost';
+				$user		= 'u122030778_victorlop';
+				$passwd		= 'AutoParts@rostrMaga';
+			}
+
 		    $this->_db = new PDO('mysql:host='.$host.';dbname='.$database, $user, $passwd, array(
 				PDO::ATTR_PERSISTENT => true, PDO::MYSQL_ATTR_INIT_COMMAND => 'SET NAMES utf8'));
 		} catch (PDOException $e) {
