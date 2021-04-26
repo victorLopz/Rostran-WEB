@@ -37,8 +37,6 @@
 
 <!-- AdminLTE for demo purposes -->
 <script src="Views/dist/js/demo.js"></script>
-<!-- AdminLTE dashboard demo (This is only for demo purposes) -->
-<script src="Views/dist/js/pages/dashboard2.js"></script>
 <!-- DATA TABLE -->
 <script type="text/javascript" charset="utf8" src="https://cdn.datatables.net/1.10.23/js/jquery.dataTables.js"></script>
 
