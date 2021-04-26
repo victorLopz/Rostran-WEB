@@ -89,7 +89,7 @@ if($_SESSION["s_usuario"] === null){
           <img src="Views/dist/img/LogotipoInnova.jpg" class="img-circle elevation-2" alt="User Image">
         </div>
         <div class="info">
-          <a href="#" class="d-block">INNOVA VIRTUAL</a>
+          <a href="#" class="d-block">Rostran</a>
         </div>
       </div>
 

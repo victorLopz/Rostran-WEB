@@ -52,7 +52,7 @@
 <div class="card text-center">
   
   <div class="card-header">
-  <img class="rounded float-left" src="../dashboard/img/logo.jpg" alt="Card image cap">
+  <img class="rounded float-left" src="../dashboard/img/logo.jpeg" alt="Card image cap">
     <p class="centrado font-weight-bold" >AUTOPARTES<br>ROSTRAN<br>
     <br>Cliente: <?php echo $_GET["nombre"];?>
   </div>

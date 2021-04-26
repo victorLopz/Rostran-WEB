@@ -13,7 +13,7 @@ class TableData {
 				$passwd		= '';			
 			}else{
 				$host		= 'localhost';
-				$database	= 'u122030778_autopartesrost';
+				$database	= 'u122030778_autopartesRost';
 				$user		= 'u122030778_victorlop';
 				$passwd		= 'AutoParts@rostrMaga';
 			}

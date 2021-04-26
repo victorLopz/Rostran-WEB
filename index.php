@@ -17,7 +17,7 @@
 <body class="hold-transition login-page">
 <div class="login-box">
   <div class="login-logo">
-    <a href="index.php"><b>INNOVA </b>VIRTUAL</a>
+    <a href="index.php"><b>AUTO PARTES</b> ROSTRAN</a>
   </div>
   <!-- /.login-logo -->
   <div class="card">

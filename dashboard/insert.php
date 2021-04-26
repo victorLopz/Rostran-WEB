@@ -37,20 +37,21 @@
             </div>
           </div>
           <!-- /.card-header -->
+          <form id="formPersonas">    
           <div class="card-body">
 
             <div class="form-row">
                       <div class="form-group col-md-4">
                           <label for="inputCity">Producto</label>
-                          <input type="Telephone" class="form-control" id="nombre" required>
+                          <input type="text" class="form-control" id="nombre" required>
                       </div>
                       <div class="form-group col-md-4">
                           <label for="inputState">Codigo 1</label>
-                          <input type="email" class="form-control" id="codigo1" required>
+                          <input type="text" class="form-control" id="codigo1" required>
                       </div>
                       <div class="form-group col-md-4">
                           <label for="inputZip">Codigo 2</label>
-                          <input type="email" class="form-control" id="codigo2">
+                          <input type="text" class="form-control" id="codigo2">
                       </div>
             </div>
 
@@ -67,7 +68,7 @@
                 <div class="form-row">
                     <div class="form-group col-md-2">
                         <label for="inputCity">Precio</label>
-                        <input type="Telephone" class="form-control" id="pventa" required>
+                        <input type="number" class="form-control" id="pventa" required>
                     </div>
                     <div class="form-group col-md-2">
                         <label for="inputState">Año</label>
@@ -84,6 +85,7 @@
                 <button type="submit" class="btn btn-primary">Guardar</button>
             </div>
         </div>
+        </fomr>
         <!-- /.card -->
 
         </section>

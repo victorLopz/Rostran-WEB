@@ -22,9 +22,9 @@ switch($opcion){
         $resultado->execute();
 
         if($resultado){
-            echo "GUARDADO";
+            $data = "GUARDADO";
         }else{
-            echo "ERROR";
+           $data=  "ERROR";
         }
 
         break;

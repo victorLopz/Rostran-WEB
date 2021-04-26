@@ -1,1 +1,0 @@
-﻿# Proyecto de Innova Virtual

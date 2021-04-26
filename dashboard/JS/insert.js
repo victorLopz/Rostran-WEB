@@ -32,6 +32,7 @@ $("#formPersonas").submit(function(e){
                     'Con exito',
                     'success'
                   )
-            }        
+                  document.location.reload(); 
+            }  
         });    
 });
