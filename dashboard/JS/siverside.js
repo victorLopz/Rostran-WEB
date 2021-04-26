@@ -1,5 +1,5 @@
 $(document).ready(function() {
-    tablaproductos = $('#tablaproductos').DataTable( {
+    tablaproductos = $('#tablaproductos').DataTable({
         "processing": true,
         "serverSide": true,
         "sAjaxSource": "../dashboard/bd/cargar.php",
@@ -32,15 +32,14 @@ $(document).ready(function() {
     new $.fn.dataTable.Buttons( tablaproductos, {
         buttons: [
             'pdf', 'excel'
-        ]
-        
-    } );
+        ]   
+    });
 
     tablaproductos.buttons( 0, null ).container().prependTo(
         tablaproductos.table().container()
     );
 
-} );
+});
 
 
 $(document).on("click", ".btnEditar", function(){    
