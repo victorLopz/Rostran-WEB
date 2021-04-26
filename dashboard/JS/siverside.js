@@ -33,6 +33,7 @@ $(document).ready(function() {
         buttons: [
             'pdf', 'excel'
         ]
+        
     } );
 
     tablaproductos.buttons( 0, null ).container().prependTo(
