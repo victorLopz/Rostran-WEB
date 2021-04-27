@@ -30,17 +30,17 @@
         Importar Excel
       </div>
       <div class="card-body">
-        <form class="login-form validate-form" id="formLogin" name="formLogin" method="POST" enctype="multipart/form-data">
+        <form id="formPersonas">  
           <div class="input-group mb-3">
             <div class="custom-file"> 
-              <input type="file" class="custom-file-input" id="excelfile" name="excelfile">
-              <label class="custom-file-label" for="inputGroupFile02">Buscar Archivos</label>
+              <input type="file" class="custom-file-input" id="pdfimport" name="pdfimport" multiple>
+              <label class="custom-file-label" id = "namefile" for="inputGroupFile02">Buscar Archivos</label>
             </div>
             <div class="input-group-append">
-              <button class="btn btn-outline-secondary"  type='submit' name='enviar'>Subir</button>
+              <button class="btn btn-success enviar" id="enviar" type='submit' name='enviar'>Subir</button>
             </div>
           </div>
-        </form>
+          </form>      
       </div>
     </div>
 
@@ -50,6 +50,7 @@
 
 <script src="//cdn.jsdelivr.net/npm/sweetalert2@10"></script>
 <script src="JS/excel.js"></script>
+<script src="JS/xlsx.full.min.js"></script>
 
 <style>
 .card-header {
